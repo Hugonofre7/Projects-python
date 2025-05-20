@@ -1,22 +1,47 @@
+from jinja2 import Environment, FileSystemLoader
 import pdfkit
-import jinja2
 from datetime import datetime
+import os
 
-my_name = "Hugo"
-item1 = "TV"
-item2 = "Refrigerator"
-item3 = "Mueble"
-today_date = datetime.today().strftime("%d-%b-%Y")
+# Configuración de rutas
+current_dir = os.path.dirname(os.path.abspath(__file__))
+template_dir = os.path.join(current_dir, 'AutomatizarPDF') 
+output_dir = os.path.join(current_dir, 'ContratoGenerado')
 
-context = {'my_name': my_name, 'item1': item1, 'item2': item2, 'item3': item3,
-           'today_date': today_date}
+# Crear directorios si no existen
+os.makedirs(template_dir, exist_ok=True)
+os.makedirs(output_dir, exist_ok=True)
 
-# Load the HTML template
-template_loader = jinja2.FileSystemLoader(searchpath="./")
-template_env = jinja2.Environment(loader=template_loader)
+# Configuración de Jinja2
+env = Environment(loader=FileSystemLoader(template_dir))
 
-html_template = 'plantilla.html'
-template = template_env.get_template(html_template)
-template.render(context)
+# Datos de ejemplo para el contrato
+datos_contrato = {
+    'nombre_cliente': 'Hugo Onofre',
+    'fecha_actual': datetime.now().strftime('%d/%m/%Y'),
+    # Agrega aquí todos los datos que necesita tu plantilla
+}
 
-pdfkit.configuration(wkhtmltopdf='C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe')
+# Nombre del archivo de plantilla
+template_name = 'plantilla.html'
+template_path = os.path.join(template_dir, template_name)
+
+# Verificar si la plantilla existe
+if not os.path.exists(template_path):
+    raise FileNotFoundError(f"La plantilla {template_name} no existe en {template_dir}")
+
+# Renderizar la plantilla
+template = env.get_template(template_name)
+html_content = template.render(datos_contrato)
+
+# Configurar pdfkit (asegúrate de tener wkhtmltopdf instalado)
+options = {
+    'encoding': 'UTF-8',
+    'no-outline': None
+}
+
+# Generar PDF
+output_pdf = os.path.join(output_dir, f"contrato_{datos_contrato['nombre_cliente']}.pdf")
+pdfkit.from_string(html_content, output_pdf, options=options)
+
+print(f"Contrato generado en: {output_pdf}")
