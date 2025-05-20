@@ -69,22 +69,23 @@
         <h1>CONTRATO DE COMPRAVENTA ENTRE PARTICULARES</h1>
         
         <div class="header-info">
-            En <span class="placeholder">[lugar]</span>, a <span class="placeholder">[fecha]</span>
+            En {{fecha_actual}}, 
         </div>
         
         <div class="partes">
             <div class="parte">
                 <h2>De una parte, LA PARTE VENDEDORA:</h2>
-                <p>D. <span class="placeholder">[Nombre completo del vendedor]</span>, con N.I.F. nº <span class="placeholder">[NIF vendedor]</span>, 
-                y domicilio en <span class="placeholder">[localidad]</span>, calle <span class="placeholder">[calle]</span>, 
-                nº <span class="placeholder">[número]</span>, C.P. <span class="placeholder">[código postal]</span>.</p>
+                <p>D. {{ nombre_vendedor }}, con N.I.F. nº {{ nif_vendedor }}, 
+                y domicilio en {{ localidad_vendedor }}, calle {{ calle_vendedor }}, 
+                nº {{ numero_vendedor }}, C.P. {{ cp_vendedor }}.</p>
+
             </div>
             
             <div class="parte">
                 <h2>De otra parte, LA PARTE COMPRADORA:</h2>
-                <p>D. <span class="placeholder">[Nombre completo del comprador]</span>, con N.I.F. nº <span class="placeholder">[NIF comprador]</span>, 
-                y domicilio en <span class="placeholder">[localidad]</span>, calle <span class="placeholder">[calle]</span>, 
-                nº <span class="placeholder">[número]</span>, C.P. <span class="placeholder">[código postal]</span>.</p>
+                <p>D. {{ nombre_comprador }}, con N.I.F. nº {{ nif_comprador }}, 
+                y domicilio en {{ localidad_comprador }}, calle {{ calle_comprador }}, 
+                nº {{ numero_comprador }}, C.P. {{ cp_comprador }}.</p>
             </div>
             
             <p>Ambas partes, interviniendo en su propio nombre y derecho y reconociéndose capacidad legal para este acto,</p>
