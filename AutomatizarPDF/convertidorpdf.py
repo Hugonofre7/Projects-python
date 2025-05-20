@@ -17,9 +17,23 @@ env = Environment(loader=FileSystemLoader(template_dir))
 
 # Datos de ejemplo para el contrato
 datos_contrato = {
-    'nombre_cliente': 'Hugo Onofre',
-    'fecha_actual': datetime.now().strftime('%d/%m/%Y'),
-    # Agrega aquí todos los datos que necesita tu plantilla
+    'fecha_actual': datetime.now().strftime('%d %b %Y'),
+    'localidad': 'Madrid',
+    'nombre_vendedor': 'Ana López',
+    'nif_vendedor': '12345678A',
+    'localidad_vendedor': 'Barcelona',
+    'calle_vendedor': 'Gran Vía',
+    'numero_vendedor': '123',
+    'cp_vendedor': '08001',
+    'nombre_comprador': 'Hugo Onofre',
+    'nif_comprador': '87654321B',
+    'localidad_comprador': 'Valencia',
+    'calle_comprador': 'Avenida del Puerto',
+    'numero_comprador': '456',
+    'cp_comprador': '46001',
+    'descripcion_bien': 'un vehículo modelo Toyota Corolla del año 2015',
+    'cantidad_numeros': '10,000',
+    'cantidad_letras': 'diez mil',
 }
 
 # Nombre del archivo de plantilla
