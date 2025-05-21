@@ -69,7 +69,7 @@
         <h1>CONTRATO DE COMPRAVENTA ENTRE PARTICULARES</h1>
         
         <div class="header-info">
-            En {{fecha_actual}}, 
+            En {{ localidad }}, a {{ fecha_actual }} 
         </div>
         
         <div class="partes">
@@ -93,7 +93,7 @@
         
         <h2>EXPONEN</h2>
         
-        <p>I.- Que ambas partes han convenido formalizar contrato de compraventa de <span class="placeholder">[descripción del bien]</span>.</p>
+        <p>I.- Que ambas partes han convenido formalizar contrato de compraventa de {{ descripcion_bien }}.</span>.</p>
         
         <p>Expuesto cuanto antecede, convienen en celebrar el presente contrato de compraventa de <span class="placeholder">[descripción del bien]</span> de acuerdo con las siguientes:</p>
         
@@ -101,7 +101,7 @@
         
         <div class="clausula">
             <div class="clausula-title">PRIMERA.</div>
-            <p>El vendedor vende al comprador <span class="placeholder">[descripción detallada del bien]</span> de su propiedad anteriormente especificado por la cantidad de <span class="placeholder">[cantidad en números]</span> euros (<span class="placeholder">[cantidad en letras]</span> €), sin incluir los impuestos correspondientes, que serán a cargo del comprador.</p>
+            <p>El vendedor vende al comprador {{ descripcion_bien }}... por la cantidad de {{ cantidad_numeros }} euros ({{ cantidad_letras }} €).</p>
         </div>
         
         <div class="clausula">
@@ -122,7 +122,7 @@
         
         <div class="clausula">
             <div class="clausula-title">QUINTA.</div>
-            <p>Para cualquier litigio que surja entre las partes de la interpretación o cumplimiento del presente contrato, éstas, con expresa renuncia al fuero que pudiera corresponderles, se someterán a los Juzgados y Tribunales de <span class="placeholder">[localidad]</span>.</p>
+            <p>Para cualquier litigio que surja entre las partes de la interpretación o cumplimiento del presente contrato, éstas, con expresa renuncia al fuero que pudiera corresponderles, se someterán a los Juzgados y Tribunales de {{ localidad }}</p>
         </div>
         
         <p>Y para que así conste, firman el presente contrato de compraventa, por triplicado, en la fecha y lugar arriba indicados.</p>
