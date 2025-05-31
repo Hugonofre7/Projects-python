@@ -1,11 +1,11 @@
 from jinja2 import Environment, FileSystemLoader
-import pdfkit
+from weasyprint import HTML
 from datetime import datetime
 import os
 
 # Configuración de rutas
 current_dir = os.path.dirname(os.path.abspath(__file__))
-template_dir = current_dir 
+template_dir = os.path.join(current_dir, 'AutomatizarPDF')
 output_dir = os.path.join(current_dir, 'ContratoGenerado')
 
 # Crear directorios si no existen
@@ -39,27 +39,15 @@ datos_contrato = {
 template = env.get_template('plantilla.html')
 html_content = template.render(datos_contrato)
 
-# Guardar HTML para debug (opcional)
-with open(os.path.join(output_dir, 'debug.html'), 'w') as f:
+# Guardar HTML para debug
+debug_html_path = os.path.join(output_dir, 'debug.html')
+with open(debug_html_path, 'w', encoding='utf-8') as f:
     f.write(html_content)
 
-# Configurar pdfkit (macOS)
-config = pdfkit.configuration(wkhtmltopdf='/usr/local/bin/wkhtmltopdf'))
-options = {
-    'encoding': 'UTF-8',
-    'enable-local-file-access': None  # Necesario para cargar CSS/local files
-}
+# Generar PDF con WeasyPrint
+output_pdf = os.path.join(output_dir, f"contrato_{datos_contrato['nombre_comprador']}.pdf")
+HTML(string=html_content).write_pdf(output_pdf)
 
-# Generar PDF
-try:
-    output_pdf = os.path.join(output_dir, f"contrato_{datos_contrato['nombre_comprador']}.pdf")
-    pdfkit.from_string(
-        html_content, 
-        output_pdf, 
-        options=options, 
-        configuration=config,
-        verbose=True  # Mostrar logs detallados
-    )
-    print(f"✅ PDF generado con éxito en: {output_pdf}")
-except Exception as e:
-    print(f"❌ Error: {e}")
+print(f"✅ PDF generado en: {output_pdf}")
+print(f"📄 HTML de debug en: {debug_html_path}")
+
