@@ -1,12 +1,12 @@
-#from jinja2 import Environment, FileSystemLoader
-#from weasyprint import HTML
+from jinja2 import Environment, FileSystemLoader
+from weasyprint import HTML
 from datetime import datetime
 import os
 
 # Configuración de rutas
 current_dir = os.path.dirname(os.path.abspath(__file__))
-template_dir = os.path.join(current_dir, 'AutomatizarPDF')
 output_dir = os.path.join(current_dir, 'ContratoGenerado')
+template_dir = current_dir
 
 # Crear directorios si no existen
 os.makedirs(output_dir, exist_ok=True)
@@ -31,8 +31,8 @@ datos_contrato = {
     'numero_comprador': '456',
     'cp_comprador': '01800',
     'descripcion_bien': 'un vehículo modelo Toyota Corolla del año 2015',
-    'cantidad_numeros': '10,000',
-    'cantidad_letras': 'diez mil',
+    'cantidad_numeros': '150,000',
+    'cantidad_letras': 'ciento cincuenta mil',
 }
 
 # Renderizar plantilla
