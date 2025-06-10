@@ -33,6 +33,7 @@ datos_contrato = {
     'descripcion_bien': 'un vehículo modelo Toyota Corolla del año 2015',
     'cantidad_numeros': '150,000',
     'cantidad_letras': 'ciento cincuenta mil',
+    'numero_contrato': 'CT-2025-001',
 }
 
 # Renderizar plantilla
