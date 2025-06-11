@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+# Temporizador en Python
+
+Un simple temporizador/cronómetro en Python que cuenta regresivamente desde un tiempo especificado hasta cero.
+
+## Características
+
+- Cuenta regresivamente en formato HH:MM:SS o MM:SS según sea necesario
+- Muestra el tiempo restante en la misma línea (actualización en tiempo real)
+- Manejo de errores para entradas inválidas
+- Permite detener el temporizador con Ctrl+C
+- Mensaje claro cuando el tiempo se completa
+
+## Requisitos
+
+- Python 3.x
+
+## Cómo usar
+
+1. Clona el repositorio o copia el código
+2. Ejecuta el script:
+
+```bash
+python temporizador.py
+=======
 # Python Projects
 # 🐍 Python Projects
 
@@ -37,3 +62,4 @@ Aquí iré subiendo scripts, automatizaciones y mini-proyectos que voy creando p
 - Seguiré agregando nuevas automatizaciones, herramientas y experimentos con Python.
 
 ## 📌 Estructura del repositorio
+>>>>>>> f6143058ef1a32c1c50be5cce13b19ba31feb814
