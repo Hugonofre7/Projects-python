@@ -40,7 +40,7 @@ Aquí iré subiendo scripts, automatizaciones y mini-proyectos que voy creando p
 ## 📌 Estructura del repositorio
 >>>>>>> f6143058ef1a32c1c50be5cce13b19ba31feb814
 
-# Temporizador en Python
+# 4 Temporizador en Python
 
 Un simple temporizador/cronómetro en Python que cuenta regresivamente desde un tiempo especificado hasta cero.
 
