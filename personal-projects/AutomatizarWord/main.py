@@ -1,14 +1,38 @@
+import argparse
 from automatizar_word.generator import generar_documentos
 from automatizar_word.utils import cargar_csv
 
 
 def main() -> None:
-    template_path = "templates/mi-plantilla.docx"
-    csv_path = "data/Datos-job.csv"
-    output_dir = "output"
+    parser = argparse.ArgumentParser(
+        description="Generador automático de cartas de presentación en Word"
+    )
 
-    datos = cargar_csv(csv_path)
-    generar_documentos(template_path, datos, output_dir)
+    parser.add_argument(
+        "--template",
+        type=str,
+        default="templates/mi-plantilla.docx",
+        help="Ruta del archivo plantilla .docx",
+    )
+
+    parser.add_argument(
+        "--csv",
+        type=str,
+        default="data/Datos-job.csv",
+        help="Ruta del archivo CSV con datos",
+    )
+
+    parser.add_argument(
+        "--output",
+        type=str,
+        default="output",
+        help="Directorio donde se guardarán los documentos generados",
+    )
+
+    args = parser.parse_args()
+
+    datos = cargar_csv(args.csv)
+    generar_documentos(args.template, datos, args.output)
 
 
 if __name__ == "__main__":
