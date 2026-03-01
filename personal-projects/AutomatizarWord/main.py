@@ -1,8 +1,15 @@
 import argparse
 import os
 import sys
+import logging
 from automatizar_word.generator import generar_documentos
 from automatizar_word.utils import cargar_csv
+
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
 
 def main() -> None:
@@ -33,25 +40,22 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    # Validar existencia del template
     if not os.path.exists(args.template):
-        print(f"❌ Error: No se encontró la plantilla en '{args.template}'")
+        logging.error(f"No se encontró la plantilla en '{args.template}'")
         sys.exit(1)
 
-    # Validar existencia del CSV
     if not os.path.exists(args.csv):
-        print(f"❌ Error: No se encontró el archivo CSV en '{args.csv}'")
+        logging.error(f"No se encontró el archivo CSV en '{args.csv}'")
         sys.exit(1)
 
-    # Crear carpeta output si no existe
     os.makedirs(args.output, exist_ok=True)
 
     try:
         datos = cargar_csv(args.csv)
         generar_documentos(args.template, datos, args.output)
-        print("✅ Documentos generados correctamente.")
+        logging.info("Documentos generados correctamente.")
     except Exception as e:
-        print(f"❌ Error inesperado: {e}")
+        logging.error(f"Error inesperado: {e}")
         sys.exit(1)
 
 
