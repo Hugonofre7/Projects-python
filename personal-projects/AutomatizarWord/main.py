@@ -6,40 +6,52 @@ from automatizar_word.generator import generar_documentos
 from automatizar_word.utils import cargar_csv
 
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
+def configurar_logging(verbose: bool) -> None:
+    """
+    Configura el sistema de logging.
+    """
+    nivel = logging.DEBUG if verbose else logging.INFO
+
+    logging.basicConfig(
+        level=nivel,
+        format="%(asctime)s - %(levelname)s - %(message)s",
+    )
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generador automático de cartas de presentación en Word"
     )
+    parser.add_argument(
+    "--template",
+    type=str,
+    default="templates/mi-plantilla.docx",
+    help="Ruta del archivo de plantilla Word (.docx)",
+)
 
     parser.add_argument(
-        "--template",
-        type=str,
-        default="templates/mi-plantilla.docx",
-        help="Ruta del archivo plantilla .docx",
-    )
+    "--csv",
+    type=str,
+    default="data/Datos-job.csv",
+    help="Ruta del archivo CSV con datos",
+)
 
     parser.add_argument(
-        "--csv",
-        type=str,
-        default="data/Datos-job.csv",
-        help="Ruta del archivo CSV con datos",
-    )
+    "--output",
+    type=str,
+    default="output",
+    help="Directorio donde se guardarán los documentos generados",
+)
 
     parser.add_argument(
-        "--output",
-        type=str,
-        default="output",
-        help="Directorio donde se guardarán los documentos generados",
-    )
+    "--verbose",
+    action="store_true",
+    help="Activa modo detallado (DEBUG)",
+)
 
     args = parser.parse_args()
-
+    configurar_logging(args.verbose)
+    
     if not os.path.exists(args.template):
         logging.error(f"No se encontró la plantilla en '{args.template}'")
         sys.exit(1)

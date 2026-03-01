@@ -1,3 +1,4 @@
+import logging
 from docxtpl import DocxTemplate
 from datetime import datetime
 
@@ -9,7 +10,7 @@ def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str
     """
     for index, fila in enumerate(csv_data):
         doc = DocxTemplate(template_path)
-
+        logging.debug(f"Generando documento para: {fila.get('company')}")
         fecha_actual = datetime.now().strftime("%d %b, %Y")
 
         context = {
