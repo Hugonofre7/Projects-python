@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: caesarhacker
+Version: 0.1.0
+Summary: Caesar Hacker - Brute force decryption
+Author: Hugo Onofre
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0
