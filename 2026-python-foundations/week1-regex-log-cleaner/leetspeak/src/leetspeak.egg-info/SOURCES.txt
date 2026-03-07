@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/leetspeak/__init__.py
+src/leetspeak/cli.py
+src/leetspeak/converter.py
+src/leetspeak.egg-info/PKG-INFO
+src/leetspeak.egg-info/SOURCES.txt
+src/leetspeak.egg-info/dependency_links.txt
+src/leetspeak.egg-info/entry_points.txt
+src/leetspeak.egg-info/requires.txt
+src/leetspeak.egg-info/top_level.txt
+tests/test_converter.py
