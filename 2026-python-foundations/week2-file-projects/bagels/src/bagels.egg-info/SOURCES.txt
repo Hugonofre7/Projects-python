@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/bagels/__init__.py
+src/bagels/cli.py
+src/bagels/game.py
+src/bagels.egg-info/PKG-INFO
+src/bagels.egg-info/SOURCES.txt
+src/bagels.egg-info/dependency_links.txt
+src/bagels.egg-info/entry_points.txt
+src/bagels.egg-info/requires.txt
+src/bagels.egg-info/top_level.txt
+tests/test_game.py
