@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/factor_finder/__init__.py
+src/factor_finder/cli.py
+src/factor_finder/factors.py
+src/factor_finder.egg-info/PKG-INFO
+src/factor_finder.egg-info/SOURCES.txt
+src/factor_finder.egg-info/dependency_links.txt
+src/factor_finder.egg-info/entry_points.txt
+src/factor_finder.egg-info/requires.txt
+src/factor_finder.egg-info/top_level.txt
+tests/test_factors.py

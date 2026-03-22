@@ -1,0 +1,2 @@
+[console_scripts]
+factor-finder = factor_finder.cli:main
