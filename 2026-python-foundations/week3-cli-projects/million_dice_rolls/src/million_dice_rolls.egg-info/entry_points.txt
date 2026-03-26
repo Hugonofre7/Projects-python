@@ -1,0 +1,2 @@
+[console_scripts]
+million-dice = million_dice_rolls.cli:main
