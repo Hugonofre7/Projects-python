@@ -1,0 +1,2 @@
+[console_scripts]
+forest-fire = forest_fire.cli:main
