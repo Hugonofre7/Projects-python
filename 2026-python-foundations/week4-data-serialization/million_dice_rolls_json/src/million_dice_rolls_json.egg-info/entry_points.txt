@@ -1,0 +1,2 @@
+[console_scripts]
+million-dice-json = million_dice_rolls.cli:main
