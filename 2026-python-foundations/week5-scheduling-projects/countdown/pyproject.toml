@@ -1,0 +1,18 @@
+[project]
+name = "countdown"
+version = "0.1.0"
+description = "Countdown timer with visual feedback"
+readme = "README.md"
+authors = [{name = "Hugo Onofre"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.0",
+]
+
+[project.scripts]
+countdown = "countdown.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
