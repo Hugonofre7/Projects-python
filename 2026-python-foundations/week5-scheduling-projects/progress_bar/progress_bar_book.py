@@ -42,7 +42,7 @@ def getProgressBar(progress, total, barWidth=40):
     # Calculate the number of "bars" to display:
     numberOfBars = int((progress / total) * barWidth)
     
-
+    progressBar = '['
     progressBar += BAR * numberOfBars  # Add the progress bar.
     progressBar += ' ' * (barWidth - numberOfBars)  # Add empty space.
     progressBar += ']' # Add the right end of the progress bar.
