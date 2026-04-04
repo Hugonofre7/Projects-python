@@ -3,7 +3,7 @@ name = "maze_runner"
 version = "0.1.0"
 description = "Maze Runner 2D - File reading practice"
 readme = "README.md"
-authors = [{name = "Hugo Nofre"}]
+authors = [{name = "Hugo Onofre"}]
 license = {text = "MIT"}
 requires-python = ">=3.11"
 dependencies = [
