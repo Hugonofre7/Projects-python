@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: progress_simulator
+Version: 0.1.0
+Summary: Deployment Simulator with Progress Bar and Timer
+Author: Hugo Onofre
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0
