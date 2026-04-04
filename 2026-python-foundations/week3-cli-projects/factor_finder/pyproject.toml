@@ -3,7 +3,7 @@ name = "factor_finder"
 version = "0.1.0"
 description = "Factor Finder - CLI tool to find factors of numbers"
 readme = "README.md"
-authors = [{name = "Hugo Nofre"}]
+authors = [{name = "Hugo Onofre"}]
 license = {text = "MIT"}
 requires-python = ">=3.11"
 dependencies = [
