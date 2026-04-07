@@ -86,3 +86,4 @@ try:
     print('Full {}ed text copied to clipboard.'.format(mode))
 except:
     pass  # Do nothing if pyperclip wasn't installed.
+
