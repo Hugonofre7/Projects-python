@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: game_of_life
+Version: 0.1.0
+Summary: Conway's Game of Life - Cellular automata simulation
+Author: Hugo Onofre
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0

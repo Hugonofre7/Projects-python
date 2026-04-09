@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/game_of_life/__init__.py
+src/game_of_life/cli.py
+src/game_of_life.egg-info/PKG-INFO
+src/game_of_life.egg-info/SOURCES.txt
+src/game_of_life.egg-info/dependency_links.txt
+src/game_of_life.egg-info/entry_points.txt
+src/game_of_life.egg-info/requires.txt
+src/game_of_life.egg-info/top_level.txt
+tests/test_game.py
