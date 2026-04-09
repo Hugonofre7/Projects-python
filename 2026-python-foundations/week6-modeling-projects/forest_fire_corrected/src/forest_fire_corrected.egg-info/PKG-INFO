@@ -7,3 +7,4 @@ License: MIT
 Requires-Python: >=3.11
 Description-Content-Type: text/markdown
 Requires-Dist: click>=8.1.0
+Requires-Dist: bext>=0.1.1
