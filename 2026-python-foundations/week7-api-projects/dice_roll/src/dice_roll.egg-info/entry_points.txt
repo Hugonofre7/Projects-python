@@ -1,0 +1,2 @@
+[console_scripts]
+dice-roll = dice_roll.cli:main
