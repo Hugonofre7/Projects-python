@@ -48,7 +48,12 @@ def main() -> None:
     action="store_true",
     help="Activa modo detallado (DEBUG)",
 )
-
+    parser.add_argument(
+        "--name",
+        type=str,
+        default="Usuario",
+        help="Nombre que se usará en los documentos generados",
+)
     args = parser.parse_args()
     configurar_logging(args.verbose)
     
@@ -64,7 +69,7 @@ def main() -> None:
 
     try:
         datos = cargar_csv(args.csv)
-        generar_documentos(args.template, datos, args.output)
+        generar_documentos(args.template, datos, args.output, args.name)
         logging.info("Documentos generados correctamente.")
     except Exception as e:
         logging.error(f"Error inesperado: {e}")

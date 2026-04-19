@@ -22,7 +22,7 @@ def limpiar_texto(texto: str) -> str:
     texto = texto.replace(" ", "").replace("/", "").replace("\\", "")
 
     return texto
-def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str) -> None:
+def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str, nombre_usuario: str) -> None:
     """
     Genera documentos Word personalizados a partir de una plantilla
     y una lista de diccionarios con datos.
@@ -47,7 +47,7 @@ def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str
         }
 
         doc.render(context)
-        nombre = limpiar_texto("HugoOnofre")
+        nombre = limpiar_texto(nombre_usuario)
         empresa = limpiar_texto(fila.get("company", "Empresa"))
         puesto = limpiar_texto(fila.get("job", "Puesto"))
 
@@ -62,6 +62,3 @@ def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str
             nombre_sin_ext = nombre_archivo.replace(".docx", "")
             ruta_final = os.path.join(output_dir, f"{nombre_sin_ext}_{contador}.docx")
             contador += 1
-
-        doc.save(ruta_final)
-
