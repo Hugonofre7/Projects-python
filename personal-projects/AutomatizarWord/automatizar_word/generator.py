@@ -1,13 +1,26 @@
 import logging
+import unicodedata
 from docxtpl import DocxTemplate
 from datetime import datetime
 
 def limpiar_texto(texto: str) -> str:
     """
-    Limpia texto para usarlo en nombres de archivo.
+    Limpia texto para usarlo en nombres de archivo:
+    - Elimina acentos
+    - Quita espacios
+    - Elimina caracteres inválidos
     """
-    return texto.replace(" ", "").replace("/", "").replace("\\", "")
+    if not texto:
+        return ""
 
+    # Normalizar acentos
+    texto = unicodedata.normalize("NFKD", texto)
+    texto = texto.encode("ascii", "ignore").decode("utf-8")
+
+    # Limpiar caracteres
+    texto = texto.replace(" ", "").replace("/", "").replace("\\", "")
+
+    return texto
 def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str) -> None:
     """
     Genera documentos Word personalizados a partir de una plantilla
