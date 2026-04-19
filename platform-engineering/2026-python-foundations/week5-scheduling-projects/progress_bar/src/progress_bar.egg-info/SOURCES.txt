@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/progress_bar/__init__.py
+src/progress_bar/bar.py
+src/progress_bar/cli.py
+src/progress_bar.egg-info/PKG-INFO
+src/progress_bar.egg-info/SOURCES.txt
+src/progress_bar.egg-info/dependency_links.txt
+src/progress_bar.egg-info/entry_points.txt
+src/progress_bar.egg-info/requires.txt
+src/progress_bar.egg-info/top_level.txt
+tests/test_bar.py

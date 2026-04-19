@@ -1,0 +1,2 @@
+[console_scripts]
+progress-bar = progress_bar.cli:main

@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: million_dice_rolls_json
+Version: 0.1.0
+Summary: Million Dice Rolls - Statistics simulation with JSON export
+Author: Hugo Onofre
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0

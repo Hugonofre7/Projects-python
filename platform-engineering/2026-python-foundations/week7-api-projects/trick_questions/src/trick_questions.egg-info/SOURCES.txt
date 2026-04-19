@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/trick_questions/__init__.py
+src/trick_questions/cli.py
+src/trick_questions/questions.py
+src/trick_questions.egg-info/PKG-INFO
+src/trick_questions.egg-info/SOURCES.txt
+src/trick_questions.egg-info/dependency_links.txt
+src/trick_questions.egg-info/entry_points.txt
+src/trick_questions.egg-info/requires.txt
+src/trick_questions.egg-info/top_level.txt
+tests/test_questions.py

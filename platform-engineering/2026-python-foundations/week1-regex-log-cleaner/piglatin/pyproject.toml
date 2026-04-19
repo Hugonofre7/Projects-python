@@ -1,0 +1,23 @@
+[project]
+name = "piglatin"
+version = "0.1.0"
+description = "Pig Latin converter for log obfuscation practice"
+readme = "README.md"
+authors = [{name = "Hugo Nofre"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.0",
+]
+
+[project.scripts]
+piglatin = "piglatin.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+dependencies = [
+    "click>=8.1.0",
+    "pyperclip>=1.8.2",
+]

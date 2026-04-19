@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/piglatin/__init__.py
+src/piglatin/cli.py
+src/piglatin/converter.py
+src/piglatin.egg-info/PKG-INFO
+src/piglatin.egg-info/SOURCES.txt
+src/piglatin.egg-info/dependency_links.txt
+src/piglatin.egg-info/entry_points.txt
+src/piglatin.egg-info/requires.txt
+src/piglatin.egg-info/top_level.txt
+tests/test_converter.py

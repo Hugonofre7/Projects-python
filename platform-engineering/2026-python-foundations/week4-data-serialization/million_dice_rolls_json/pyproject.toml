@@ -1,0 +1,18 @@
+[project]
+name = "million_dice_rolls_json"
+version = "0.1.0"
+description = "Million Dice Rolls - Statistics simulation with JSON export"
+readme = "README.md"
+authors = [{name = "Hugo Onofre"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.0",
+]
+
+[project.scripts]
+million-dice-json = "million_dice_rolls.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

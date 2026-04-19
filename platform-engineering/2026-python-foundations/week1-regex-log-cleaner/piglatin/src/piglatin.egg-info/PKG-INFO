@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: piglatin
+Version: 0.1.0
+Summary: Pig Latin converter for log obfuscation practice
+Author: Hugo Nofre
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0

@@ -1,0 +1,23 @@
+[project]
+name = "leetspeak"
+version = "0.1.0"
+description = "Text converter to Leetspeak for log obfuscation practice"
+readme = "README.md"
+authors = [{name = "Hugo Nofre"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.0",  # Para la CLI
+]
+
+[project.scripts]
+leetspeak = "leetspeak.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+dependencies = [
+    "click>=8.1.0",
+    "pyperclip>=1.8.2",
+]

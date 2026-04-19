@@ -1,0 +1,2 @@
+[console_scripts]
+periodic-table = periodic_table.cli:main

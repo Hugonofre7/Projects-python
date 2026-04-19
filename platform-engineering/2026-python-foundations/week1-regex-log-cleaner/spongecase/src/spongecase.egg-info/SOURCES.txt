@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/spongecase/__init__.py
+src/spongecase/cli.py
+src/spongecase/converter.py
+src/spongecase.egg-info/PKG-INFO
+src/spongecase.egg-info/SOURCES.txt
+src/spongecase.egg-info/dependency_links.txt
+src/spongecase.egg-info/entry_points.txt
+src/spongecase.egg-info/requires.txt
+src/spongecase.egg-info/top_level.txt
+tests/test_converter.py

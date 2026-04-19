@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/dice_roll/__init__.py
+src/dice_roll/cli.py
+src/dice_roll/roller.py
+src/dice_roll.egg-info/PKG-INFO
+src/dice_roll.egg-info/SOURCES.txt
+src/dice_roll.egg-info/dependency_links.txt
+src/dice_roll.egg-info/entry_points.txt
+src/dice_roll.egg-info/requires.txt
+src/dice_roll.egg-info/top_level.txt
+tests/test_roller.py

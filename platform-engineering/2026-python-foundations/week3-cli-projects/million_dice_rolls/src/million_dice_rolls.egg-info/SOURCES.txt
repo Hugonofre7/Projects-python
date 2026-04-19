@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/million_dice_rolls/__init__.py
+src/million_dice_rolls/cli.py
+src/million_dice_rolls/simulator.py
+src/million_dice_rolls.egg-info/PKG-INFO
+src/million_dice_rolls.egg-info/SOURCES.txt
+src/million_dice_rolls.egg-info/dependency_links.txt
+src/million_dice_rolls.egg-info/entry_points.txt
+src/million_dice_rolls.egg-info/requires.txt
+src/million_dice_rolls.egg-info/top_level.txt
+tests/test_simulator.py

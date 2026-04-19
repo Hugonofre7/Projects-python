@@ -1,0 +1,2 @@
+[console_scripts]
+piglatin = piglatin.cli:main

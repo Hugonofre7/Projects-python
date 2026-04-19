@@ -2,11 +2,6 @@ import logging
 from docxtpl import DocxTemplate
 from datetime import datetime
 
-def limpiar_texto(texto: str) -> str:
-    """
-    Limpia texto para usarlo en nombres de archivo.
-    """
-    return texto.replace(" ", "").replace("/", "").replace("\\", "")
 
 def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str) -> None:
     """
@@ -33,11 +28,5 @@ def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str
         }
 
         doc.render(context)
-        nombre = limpiar_texto("HugoOnofre")
-        empresa = limpiar_texto(fila.get("company", "Empresa"))
-        puesto = limpiar_texto(fila.get("job", "Puesto"))
-
-        nombre_archivo = f"{nombre}_{empresa}_{puesto}.docx"
-
-        doc.save(f"{output_dir}/{nombre_archivo}")
+        doc.save(f"{output_dir}/mi-info_{index}.docx")
 
