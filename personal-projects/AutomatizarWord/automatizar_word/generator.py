@@ -1,4 +1,5 @@
 import logging
+import os
 import unicodedata
 from docxtpl import DocxTemplate
 from datetime import datetime
@@ -52,5 +53,15 @@ def generar_documentos(template_path: str, csv_data: list[dict], output_dir: str
 
         nombre_archivo = f"{nombre}_{empresa}_{puesto}.docx"
 
-        doc.save(f"{output_dir}/{nombre_archivo}")
+        ruta_base = os.path.join(output_dir, nombre_archivo)
+
+        contador = 1
+        ruta_final = ruta_base
+
+        while os.path.exists(ruta_final):
+            nombre_sin_ext = nombre_archivo.replace(".docx", "")
+            ruta_final = os.path.join(output_dir, f"{nombre_sin_ext}_{contador}.docx")
+            contador += 1
+
+        doc.save(ruta_final)
 
