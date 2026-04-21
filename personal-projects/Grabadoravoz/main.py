@@ -3,6 +3,7 @@ import os
 import sys
 import logging
 from voice_recorder.recorder import grabar_audio
+from voice_recorder.utils import listar_dispositivos
 
 
 def configurar_logging(verbose: bool) -> None:
@@ -52,9 +53,17 @@ def main() -> None:
         action="store_true",
         help="Modo debug",
     )
+    parser.add_argument(
+    "--list-devices",
+    action="store_true",
+    help="Lista los dispositivos de audio disponibles",
+    )
 
     args = parser.parse_args()
-
+    if args.list_devices:
+        listar_dispositivos()
+        return
+    
     configurar_logging(args.verbose)
 
     # Crear carpeta output si no existe
