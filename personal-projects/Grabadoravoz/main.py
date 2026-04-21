@@ -30,7 +30,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=str,
-        default="output/audio.wav",
+        default=None,
         help="Ruta del archivo de salida",
     )
 
@@ -60,6 +60,11 @@ def main() -> None:
     )
 
     args = parser.parse_args()
+    from datetime import datetime
+    if args.output is None:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        args.output = f"output/recording_{timestamp}.wav"
+        
     if args.list_devices:
         listar_dispositivos()
         return
