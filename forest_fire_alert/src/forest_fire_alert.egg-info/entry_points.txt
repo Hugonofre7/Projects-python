@@ -1,0 +1,2 @@
+[console_scripts]
+forest-fire-alert = forest_fire_alert.cli:main
