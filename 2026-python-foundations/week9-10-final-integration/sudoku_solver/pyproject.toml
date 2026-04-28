@@ -1,0 +1,18 @@
+[project]
+name = "sudoku_solver"
+version = "0.1.0"
+description = "Sudoku Solver - Final integration project (JSON config, progress bar, export)"
+readme = "README.md"
+authors = [{name = "Hugo Onofre"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1.0",
+]
+
+[project.scripts]
+sudoku-solve = "sudoku.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

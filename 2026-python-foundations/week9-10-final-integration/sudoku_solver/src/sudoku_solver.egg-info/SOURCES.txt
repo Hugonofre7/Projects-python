@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/sudoku/__init__.py
+src/sudoku/cli.py
+src/sudoku/solver.py
+src/sudoku_solver.egg-info/PKG-INFO
+src/sudoku_solver.egg-info/SOURCES.txt
+src/sudoku_solver.egg-info/dependency_links.txt
+src/sudoku_solver.egg-info/entry_points.txt
+src/sudoku_solver.egg-info/requires.txt
+src/sudoku_solver.egg-info/top_level.txt
+tests/test_solver.py
