@@ -1,2 +1,0 @@
-[console_scripts]
-simulate = progress_simulator.cli:main

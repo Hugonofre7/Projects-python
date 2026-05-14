@@ -1,2 +1,0 @@
-[console_scripts]
-vigenere = vigenere.cli:main

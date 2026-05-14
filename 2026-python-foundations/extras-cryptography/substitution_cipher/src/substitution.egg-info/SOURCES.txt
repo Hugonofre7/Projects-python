@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/substitution/__init__.py
+src/substitution/cipher.py
+src/substitution/cli.py
+src/substitution.egg-info/PKG-INFO
+src/substitution.egg-info/SOURCES.txt
+src/substitution.egg-info/dependency_links.txt
+src/substitution.egg-info/top_level.txt
+tests/test_cipher.py

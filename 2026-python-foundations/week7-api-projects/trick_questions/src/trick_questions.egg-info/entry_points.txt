@@ -1,2 +1,0 @@
-[console_scripts]
-trick-questions = trick_questions.cli:main

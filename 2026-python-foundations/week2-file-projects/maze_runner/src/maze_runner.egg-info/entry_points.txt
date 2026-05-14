@@ -1,2 +1,0 @@
-[console_scripts]
-maze = maze_runner.cli:main
