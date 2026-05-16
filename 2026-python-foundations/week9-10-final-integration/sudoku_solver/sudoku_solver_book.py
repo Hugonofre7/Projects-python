@@ -162,7 +162,7 @@ input('Press Enter to begin...')
 
 
 # Load the sudokupuzzles.txt file:
-with open('sudokupuzzles.txt') as puzzleFile:
+with open('data/sudokupuzzles.txt') as puzzleFile:
     puzzles = puzzleFile.readlines()
 
 # Remove the newlines at the end of each puzzle:
