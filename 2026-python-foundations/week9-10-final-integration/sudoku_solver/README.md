@@ -1,18 +1,25 @@
+# Sudoku Solver
 
-### 🔍 Causa
+Solucionador de Sudoku del libro "The Big Book of Small Python Projects".  
+Proyecto #73 - Proyecto integrador final de la Semana 9-10.
 
-El código original espera un archivo `sudokupuzzles.txt` en la raíz del proyecto que contiene los puzzles de Sudoku (81 dígitos por línea, donde `0` representa celda vacía).
-
-### ✅ Solución Propuesta (para nuestra versión personal)
-
-1. Crear la carpeta `data/` y mover el archivo allí
-2. Modificar el código para leer desde `data/sudokupuzzles.txt`
-3. Agregar manejo de errores si el archivo no existe
-4. Permitir cargar puzzles desde JSON
-
----
-
-## 🚀 Cómo usar (versión original)
+## 🚀 Cómo usar
 
 ```bash
 python sudoku_solver_book.py
+
+Comandos disponibles
+Comando	Acción
+A1 5	Coloca un número en una celda
+RESET	Reinicia el puzzle actual
+NEW	Carga un nuevo puzzle
+UNDO	Deshace el último movimiento
+ORIGINAL	Vuelve al puzzle original
+QUIT	Sale del programa
+📁 Estructura
+text
+sudoku_solver/
+├── data/sudokupuzzles.txt
+├── sudoku_solver_book.py
+├── pyproject.toml
+└── README.md
