@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: sudoku_solver
+Version: 0.1.0
+Summary: Sudoku Solver - Final integration project (JSON config, progress bar, export)
+Author: Hugo Onofre
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.0
