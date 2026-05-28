@@ -18,5 +18,23 @@ def parsear_config(filepath):
         config[clave] = valor
     return config
 
+def guardar_config(filepath, config):
+    with open(filepath, 'w') as file:
+        for clave, valor in config.items():
+            file.write(f"{clave}={valor}\n")
+config = {'host': '192.168.1.1', 'port': '8080'}
+guardar_config("config.txt", config)
+
+print("Archivo guardado exitosamente.")
 print(parsear_config("config.txt"))
 
+# pruebas al final
+config = parsear_config("config.txt")
+print("Config leída:", config)
+
+config['host'] = '10.0.0.1'
+guardar_config("config.txt", config)
+print("Config guardada.")
+
+config_nueva = parsear_config("config.txt")
+print("Config actualizada:", config_nueva)

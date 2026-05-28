@@ -1,7 +1,2 @@
-# Configuración del sistema
-host=192.168.1.1
+host=10.0.0.1
 port=8080
-
-# Base de datos
-db_name=epidemiologia
-db_port=3306
