@@ -45,10 +45,11 @@ print("Config guardada.")
 config_nueva = parsear_config("config.txt")
 print("Config actualizada:", config_nueva)
 
-print(parsear_config("config.txt"))
+# Prueba de la linea inválida
+'''print(parsear_config("config.txt")) 
 
 # prueba de linea invalida
 with open("config.txt", 'w') as f:
     f.write("host=10.0.0.1\nesta_linea_esta_mal\nport=8080\n")
 
-print(parsear_config("config.txt"))
+print(parsear_config("config.txt"))''' 
