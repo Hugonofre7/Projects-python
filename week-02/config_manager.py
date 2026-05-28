@@ -31,7 +31,6 @@ guardar_config("config.txt", config)
 print("Archivo guardado exitosamente.")
 print(parsear_config("config.txt"))
 
-# pruebas al final
 config = parsear_config("config.txt")
 print("Config leída:", config)
 
