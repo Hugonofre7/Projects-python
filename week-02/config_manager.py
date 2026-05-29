@@ -32,18 +32,19 @@ def guardar_config(filepath, config):
 config = {'host': '192.168.1.1', 'port': '8080'}
 guardar_config("config.txt", config)
 
-print("Archivo guardado exitosamente.")
-print(parsear_config("config.txt"))
+if __name__ == "__main__":
+    print("Archivo guardado exitosamente.")
+    print(parsear_config("config.txt"))
 
-config = parsear_config("config.txt")
-print("Config leída:", config)
+    config = parsear_config("config.txt")
+    print("Config leída:", config)
 
-config['host'] = '10.0.0.1'
-guardar_config("config.txt", config)
-print("Config guardada.")
+    config['host'] = '10.0.0.1'
+    guardar_config("config.txt", config)
+    print("Config guardada.")
 
-config_nueva = parsear_config("config.txt")
-print("Config actualizada:", config_nueva)
+    config_nueva = parsear_config("config.txt")
+    print("Config actualizada:", config_nueva)
 
 # Prueba de la linea inválida
 '''print(parsear_config("config.txt")) 
