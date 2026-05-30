@@ -12,5 +12,7 @@ datos = [
     {'service': 'mysql', 'level': 'ERROR', 'status': 'error'}
 ]
 
+
+
 exportar_csv(datos, "reporte.csv")
 print("Archivo CSV exportado.")
