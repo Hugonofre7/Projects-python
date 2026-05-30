@@ -1,0 +1,3 @@
+service,level,status
+nginx,INFO,activo
+mysql,ERROR,error
