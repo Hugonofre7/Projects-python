@@ -1,0 +1,12 @@
+[
+    {
+        "service": "nginx",
+        "level": "INFO",
+        "status": "activo"
+    },
+    {
+        "service": "mysql",
+        "level": "ERROR",
+        "status": "error"
+    }
+]
