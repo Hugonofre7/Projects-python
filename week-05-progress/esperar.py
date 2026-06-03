@@ -11,3 +11,12 @@ def esperar(segundos, mensaje="Esperando..."):
 if __name__ == "__main__":
     esperar(5, "Health check completado!")
     
+    
+
+'''
+def esperar(segundos, mensaje="Esperando..."):
+    print(mensaje)
+    time.sleep(segundos)
+    print(f"Esperó {segundos} segundos.")
+Codigo alternativo, pero no muestra la cuenta regresiva.
+'''
