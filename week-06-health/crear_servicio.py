@@ -1,3 +1,5 @@
+
+
 def crear_servicio(nombre, estado, puerto, dependencias=[]):
     dict_servicio = {
         'nombre': nombre,
@@ -6,5 +8,7 @@ def crear_servicio(nombre, estado, puerto, dependencias=[]):
         'dependencias': dependencias
     }
     return dict_servicio
-print(crear_servicio('postgres', 'error', '5432', ['mysql', 'redis']))
 
+if __name__ == "__main__":
+    
+    print(crear_servicio('nginx', 'activo', '80', ['mysql', 'redis']))
