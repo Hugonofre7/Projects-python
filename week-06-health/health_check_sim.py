@@ -18,6 +18,15 @@ def crear_infraestructura():
 ]
     return infraestructura
 
+def simular_falla(infraestructura, nombre_servicio):
+    for servicio in infraestructura:
+        if servicio['nombre'] == nombre_servicio:
+            servicio['estado'] = 'error'
+        elif nombre_servicio in servicio['dependencias']:
+            servicio['estado'] = 'afectado'
+    return infraestructura
+
 if __name__ == "__main__":
     infraestructura = crear_infraestructura()
+    simular_falla(infraestructura, 'mysql')
     print(infraestructura)
