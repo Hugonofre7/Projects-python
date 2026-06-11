@@ -8,10 +8,18 @@ class Servicio:
 
     def __str__(self):
         return f"[{self.estado.upper()}] {self.nombre} (puerto {self.puerto})"
+    
+    def marcar_error(self):
+        self.estado = 'error'
+
+    def marcar_afectado(self):
+        self.estado = 'afectado'
         
         
 if __name__ == "__main__":
     s = Servicio("nginx", "activo", 80, ["mysql", "redis"])
     print(s)
-    print(s.nombre)
-    print(s.estado)
+    s.marcar_error()
+    print(s)
+    s.marcar_afectado()
+    print(s)
