@@ -14,12 +14,29 @@ class Servicio:
 
     def marcar_afectado(self):
         self.estado = 'afectado'
-        
-        
+    
+    def simular_falla(self, servicios):
+        self.marcar_error()
+        for servicio in servicios:
+            if self.nombre in servicio.dependencias:
+                servicio.marcar_afectado()
+            
+            
+                
 if __name__ == "__main__":
-    s = Servicio("nginx", "activo", 80, ["mysql", "redis"])
-    print(s)
-    s.marcar_error()
-    print(s)
-    s.marcar_afectado()
-    print(s)
+    nginx  = Servicio("nginx", "activo", 80,   ["mysql", "redis"])
+    mysql  = Servicio("mysql", "activo", 3306, [])
+    redis  = Servicio("redis", "activo", 6379, [])
+    api    = Servicio("api",   "activo", 8080, ["nginx", "mysql"])
+
+    servicios = [nginx, mysql, redis, api]
+
+    print("Antes:")
+    for s in servicios:
+        print(s)
+
+    mysql.simular_falla(servicios)
+
+    print("\nDespués de falla en mysql:")
+    for s in servicios:
+        print(s)
