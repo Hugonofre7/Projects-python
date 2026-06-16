@@ -1,0 +1,20 @@
+[
+    {
+        "timestamp": "2024-01-15 14:32:01",
+        "level": "ERROR",
+        "service": "auth-service",
+        "message": "Login failed for user: admin"
+    },
+    {
+        "timestamp": "2024-01-15 14:32:05",
+        "level": "INFO",
+        "service": "db-service",
+        "message": "Connection established"
+    },
+    {
+        "timestamp": "2024-01-15 14:32:09",
+        "level": "WARN",
+        "service": "api-gateway",
+        "message": "High latency detected"
+    }
+]

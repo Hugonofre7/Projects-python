@@ -1,0 +1,4 @@
+timestamp,level,service,message
+2024-01-15 14:32:01,ERROR,auth-service,Login failed for user: admin
+2024-01-15 14:32:05,INFO,db-service,Connection established
+2024-01-15 14:32:09,WARN,api-gateway,High latency detected
