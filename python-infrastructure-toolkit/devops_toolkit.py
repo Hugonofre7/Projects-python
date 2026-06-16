@@ -3,7 +3,7 @@ import logging
 import requests
 import time
 
-from alert_system import configurar_logger, verificar_servicios
+from monitorear_servicios import configurar_logger, verificar_servicios
 from log_cleaner import parse_log_line
 from data_exporter import exportar_json, exportar_csv
 from servicio import Servicio
@@ -48,10 +48,25 @@ def main():
         if not args.servicio:
             print("Para simular una falla, se requiere el argumento --servicio")
             return
-        servicio = Servicio(args.servicio)
-        servicio.simular_falla(servicio)
-        print(f"Falla simulada para el servicio {args.servicio}")
+        infraestructura = [
+            Servicio("nginx", "activo", 80,   ["mysql", "redis"]),
+            Servicio("mysql", "activo", 3306, []),
+            Servicio("redis", "activo", 6379, []),
+            Servicio("api",   "activo", 8080, ["nginx", "mysql"])
+        ]
+        
+        servicio_objetivo = next(
+            (s for s in infraestructura if s.nombre == args.servicio), 
+            None
+        )
+        
+        if not servicio_objetivo:
+            print(f"Servicio {args.servicio} no encontrado en la infraestructura.")
+            return
+        
+        servicio_objetivo.simular_falla(infraestructura)
+        
+        print(f"Falla simulada en {args.servicio}")
 
 if __name__ == "__main__":
     main()
-    
