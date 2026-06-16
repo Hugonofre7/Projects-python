@@ -23,12 +23,15 @@ def main():
     args = parser.parse_args()
 
     if args.action == 'monitor':
-        configurar_logger(args.log)
+        logger = configurar_logger("devops_monitor", args.log)
         while True:
-            resultados = verificar_servicios(args.urls)
-            for url, status in resultados.items():
-                logging.info(f"{url} - {status}")
-            time.sleep(60)  # Monitorea cada minuto
+                resultados = verificar_servicios(args.urls)
+                for r in resultados:
+                    logger.info(
+                        f"{r['url']} - {r['status_code']} - "
+                        f"{'UP' if r['disponible'] else 'DOWN'}"
+                    )
+                time.sleep(60) 
 
     elif args.action == 'parse':
         if not args.file or not args.output:
