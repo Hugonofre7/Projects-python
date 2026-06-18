@@ -1,4 +1,4 @@
-import leer_config
+
 
 def leer_config(filepath):
     valid_lines = []
